@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Onflykc Agency 2.0</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: #ffffff;
+      color: #222;
+    }
+
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 0;
+      background: #fff;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      animation: pulse 3s infinite ease-in-out;
+    }
+
+    .logo-container img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .logo-container h1 {
+      font-size: 32px;
+      font-weight: bold;
+      color: #111;
+      text-shadow: 0 0 5px #00f7ff;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: translateY(0);
+        filter: drop-shadow(0 0 6px #00f7ff);
+      }
+      50% {
+        transform: translateY(-5px);
+        filter: drop-shadow(0 0 12px #00f7ff);
+      }
+    }
+
+    .hero {
+      background: #f4fefe;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.5em;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    .btn-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .neon-button {
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      border: 2px solid #00f7ff;
+      background: transparent;
+      color: #00f7ff;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 0 8px #00f7ff;
+      text-decoration: none;
+    }
+
+    .neon-button:hover {
+      background-color: #00f7ff;
+      color: #000;
+      box-shadow: 0 0 20px #00f7ff, 0 0 30px #00f7ff;
+      transform: translateY(-2px);
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .section.alt {
+      background: #f9f9f9;
+    }
+
+    h2 {
+      color: #00bfa6;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+      background: #fff;
+    }
+
+    form textarea {
+      height: 120px;
+      resize: none;
+    }
+
+    form .btn {
+      background: #00bfa6;
+      color: #fff;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    form .btn:hover {
+      background: #009e88;
+    }
+
+    footer {
+      background: #ffffff;
+      color: #999;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.9em;
+      border-top: 1px solid #eee;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <img src="https://i.ibb.co/bVKcj9C/53-D36593-197-C-4-B55-B0-A2-30870-B2099-A6.png" alt="Ícone do Pinguim" width="50" height="50">
+      <h1>Onflykc</h1>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h2>Conectamos Marcas a Influenciadores de Verdade</h2>
+    <p>Na Onflykc Agency, representamos creators e fechamos publicidades estratégicas.</p>
+    <div class="btn-container">
+      <a href="#servicos" class="neon-button">Ver Serviços</a>
+      <a href="#contato" class="neon-button">Fazer Contato</a>
+    </div>
+  </section>
+
+  <section id="sobre" class="section">
+    <h2>Sobre a Onflykc</h2>
+    <p>A Onflykc é uma assessoria moderna focada em conectar talentos digitais a marcas que querem gerar impacto real.</p>
+  </section>
+
+  <section id="influenciadores" class="section alt">
+    <h2>Influenciadores</h2>
+    <p>Trabalhamos com creators consolidados e promissores. Quer fazer parte?</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLS..." class="neon-button">Seja Representado</a>
+  </section>
+
+  <section id="servicos" class="section">
+    <h2>Serviços</h2>
+    <ul>
+      <li><strong>Fechamento de campanhas:</strong> com influenciadores certos</li>
+      <li><strong>Gerenciamento de imagem:</strong> posicionamento estratégico</li>
+      <li><strong>Criação de Media Kits:</strong> para atrair marcas</li>
+      <li><strong>Assessoria 360°:</strong> para sua carreira digital</li>
+    </ul>
+  </section>
+
+  <section id="contato" class="section alt">
+    <h2>Entre em Contato</h2>
+    <p>Preencha o formulário e nossa equipe vai responder o mais rápido possível.</p>
+    <form action="https://formsubmit.co/gota7@proton.me" method="POST">
+      <input type="text" name="nome" placeholder="Seu nome" required>
+      <input type="email" name="email" placeholder="Seu e-mail" required>
+      <textarea name="mensagem" placeholder="Como podemos ajudar?" required></textarea>
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Onflykc Agency. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
