@@ -2,9 +2,10 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Onflykc Agency 2.0</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://i.ibb.co/bVKcj9C/53-D36593-197-C-4-B55-B0-A2-30870-B2099-A6.png" type="image/png">
   <style>
     * {
       margin: 0;
@@ -16,108 +17,137 @@
       font-family: 'Outfit', sans-serif;
       background: #ffffff;
       color: #222;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: 0.3s;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Logo */
+    .logo {
+      font-size: 2.2em;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      animation: float 3s ease-in-out infinite;
+      background: linear-gradient(270deg, #00ffff, #ff00ff, #00ffcc, #0077ff);
+      background-size: 800% 800%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: rgbGlow 8s ease infinite, float 3s ease-in-out infinite;
+    }
+
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+    }
+
+    @keyframes rgbGlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
     }
 
     header {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 30px 0;
       background: #fff;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    .logo-container {
+    .header-content {
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 15px;
-      animation: pulse 3s infinite ease-in-out;
     }
 
-    .logo-container img {
-      width: 50px;
-      height: 50px;
-      object-fit: contain;
-      border-radius: 8px;
-    }
-
-    .logo-container h1 {
-      font-size: 32px;
+    /* Botão RGB suave */
+    .btn {
+      background: transparent;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 5px;
       font-weight: bold;
-      color: #111;
-      text-shadow: 0 0 5px #00f7ff;
+      display: inline-block;
+      cursor: pointer;
+      border: 2px solid transparent;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      transition: color 0.3s ease;
     }
 
-    @keyframes pulse {
-      0%, 100% {
-        transform: translateY(0);
-        filter: drop-shadow(0 0 6px #00f7ff);
-      }
-      50% {
-        transform: translateY(-5px);
-        filter: drop-shadow(0 0 12px #00f7ff);
-      }
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(270deg, #ff00c8, #00ffe7, #fffb00, #ff00c8);
+      background-size: 600% 600%;
+      animation: rgbSmooth 10s ease infinite;
+      z-index: -1;
+      opacity: 1;
+    }
+
+    .btn:hover {
+      color: #000;
+      background-color: #fff;
+      transition: all 0.3s ease;
+    }
+
+    @keyframes rgbSmooth {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     .hero {
       background: #f4fefe;
-      text-align: center;
       padding: 80px 20px;
+      text-align: center;
     }
 
     .hero h2 {
       font-size: 2.5em;
       font-weight: 600;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      font-size: 1.2em;
-      margin-bottom: 30px;
-    }
-
-    .btn-container {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-    }
-
-    .neon-button {
-      padding: 12px 24px;
-      font-size: 16px;
-      font-weight: bold;
-      border: 2px solid #00f7ff;
-      background: transparent;
-      color: #00f7ff;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.3s ease-in-out;
-      box-shadow: 0 0 8px #00f7ff;
-      text-decoration: none;
-    }
-
-    .neon-button:hover {
-      background-color: #00f7ff;
-      color: #000;
-      box-shadow: 0 0 20px #00f7ff, 0 0 30px #00f7ff;
-      transform: translateY(-2px);
+      margin-bottom: 20px;
     }
 
     .section {
       padding: 60px 20px;
-      max-width: 800px;
-      margin: 0 auto;
+      background: #ffffff;
     }
 
     .section.alt {
       background: #f9f9f9;
     }
 
-    h2 {
-      color: #00bfa6;
+    .section h2 {
+      font-size: 2em;
       margin-bottom: 20px;
+      color: #00bfa6;
     }
 
-    ul {
+    .servicos-lista {
       list-style: disc;
       padding-left: 20px;
     }
@@ -137,17 +167,7 @@
     }
 
     form .btn {
-      background: #00bfa6;
-      color: #fff;
-      padding: 12px 25px;
-      border: none;
-      border-radius: 5px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    form .btn:hover {
-      background: #009e88;
+      margin-right: 10px;
     }
 
     footer {
@@ -158,61 +178,99 @@
       font-size: 0.9em;
       border-top: 1px solid #eee;
     }
+
+    /* Botão flutuante do WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 28px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+      z-index: 1000;
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
   </style>
 </head>
 <body>
-
   <header>
-    <div class="logo-container">
-      <img src="https://i.ibb.co/bVKcj9C/53-D36593-197-C-4-B55-B0-A2-30870-B2099-A6.png" alt="Ícone do Pinguim" width="50" height="50">
-      <h1>Onflykc</h1>
+    <div class="container header-content">
+      <h1 class="logo">
+        <img src="https://i.ibb.co/bVKcj9C/53-D36593-197-C-4-B55-B0-A2-30870-B2099-A6.png" alt="Pinguim" class="logo-icon">
+        Onflykc
+      </h1>
     </div>
   </header>
 
   <section class="hero">
-    <h2>Conectamos Marcas a Influenciadores de Verdade</h2>
-    <p>Na Onflykc Agency, representamos creators e fechamos publicidades estratégicas.</p>
-    <div class="btn-container">
-      <a href="#servicos" class="neon-button">Ver Serviços</a>
-      <a href="#contato" class="neon-button">Fazer Contato</a>
+    <div class="container">
+      <h2>Conectamos Marcas a Influenciadores de Verdade</h2>
+      <p>Na Onflykc Agency, representamos creators, fechamos campanhas e cuidamos da imagem digital dos influenciadores.</p>
+      <a href="#contato" class="btn">Quero anunciar com vocês</a>
     </div>
   </section>
 
   <section id="sobre" class="section">
-    <h2>Sobre a Onflykc</h2>
-    <p>A Onflykc é uma assessoria moderna focada em conectar talentos digitais a marcas que querem gerar impacto real.</p>
+    <div class="container">
+      <h2>Sobre a Onflykc</h2>
+      <p>A Onflykc é uma assessoria moderna focada em conectar marcas a influenciadores reais e autênticos. Nossa missão é gerar resultados com campanhas impactantes, cuidando da imagem e profissionalismo dos creators, enquanto oferecemos retorno claro para os anunciantes.</p>
+    </div>
   </section>
 
   <section id="influenciadores" class="section alt">
-    <h2>Influenciadores</h2>
-    <p>Trabalhamos com creators consolidados e promissores. Quer fazer parte?</p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLS..." class="neon-button">Seja Representado</a>
+    <div class="container">
+      <h2>Influenciadores</h2>
+      <p>Trabalhamos com talentos em ascensão e criadores já consolidados nas redes sociais. Se você é influenciador e quer representação séria e profissional, cadastre-se conosco.</p>
+      <a href="https://formulario-onflykc.com" class="btn">Cadastrar como Influenciador</a>
+    </div>
   </section>
 
   <section id="servicos" class="section">
-    <h2>Serviços</h2>
-    <ul>
-      <li><strong>Fechamento de campanhas:</strong> com influenciadores certos</li>
-      <li><strong>Gerenciamento de imagem:</strong> posicionamento estratégico</li>
-      <li><strong>Criação de Media Kits:</strong> para atrair marcas</li>
-      <li><strong>Assessoria 360°:</strong> para sua carreira digital</li>
-    </ul>
+    <div class="container">
+      <h2>Serviços</h2>
+      <ul class="servicos-lista">
+        <li><strong>Fechamento de campanhas</strong> com marcas alinhadas ao seu perfil</li>
+        <li><strong>Gestão de imagem</strong> e planejamento de carreira digital</li>
+        <li><strong>Criação de media kits</strong> profissionais e apresentações</li>
+        <li><strong>Consultoria de presença digital</strong> e posicionamento estratégico</li>
+      </ul>
+    </div>
   </section>
 
   <section id="contato" class="section alt">
-    <h2>Entre em Contato</h2>
-    <p>Preencha o formulário e nossa equipe vai responder o mais rápido possível.</p>
-    <form action="https://formsubmit.co/gota7@proton.me" method="POST">
-      <input type="text" name="nome" placeholder="Seu nome" required>
-      <input type="email" name="email" placeholder="Seu e-mail" required>
-      <textarea name="mensagem" placeholder="Como podemos ajudar?" required></textarea>
-      <button type="submit" class="btn">Enviar</button>
-    </form>
+    <div class="container">
+      <h2>Entre em Contato</h2>
+      <p>Preencha o formulário e nossa equipe retornará com uma proposta personalizada para sua marca.</p>
+      <form action="https://formsubmit.co/seuemail@email.com" method="POST">
+        <input type="text" name="nome" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu e-mail" required>
+        <textarea name="mensagem" placeholder="Como podemos ajudar?" required></textarea>
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Onflykc Agency. Todos os direitos reservados.</p>
+    <div class="container">
+      <p>&copy; 2025 Onflykc Agency • Todos os direitos reservados</p>
+    </div>
   </footer>
 
+  <!-- Botão flutuante do WhatsApp -->
+  <a href="https://wa.me/5511999128663" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    &#x1F4AC;
+  </a>
 </body>
 </html>
