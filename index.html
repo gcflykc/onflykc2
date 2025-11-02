@@ -4,201 +4,213 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Onflykc Agency | Assessoria e Conexão entre Marcas e Influenciadores</title>
+  <meta name="description" content="Onflykc Agency conecta marcas a influenciadores reais, oferecendo campanhas personalizadas, assessoria digital e criação de media kits.">
+  <meta name="keywords" content="Onflykc, agência de influenciadores, assessoria para creators, publicidade digital, media kit, marketing de influência">
+  <meta name="author" content="Onflykc Agency">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#00f7ff">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Onflykc Agency | Conectamos Marcas a Influenciadores">
+  <meta property="og:description" content="Assessoria para campanhas com influenciadores reais. Media kits, gerenciamento de imagem e mais.">
+  <meta property="og:image" content="https://i.ibb.co/bVKcj9C/53-D36593-197-C-4-B55-B0-A2-30870-B2099-A6.png">
+  <meta property="og:url" content="https://onflykc.com.br">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Onflykc Agency">
+  <meta name="twitter:description" content="Conectamos marcas a influenciadores de verdade com campanhas e assessoria digital.">
+  <meta name="twitter:image" content="https://i.ibb.co/bVKcj9C/53-D36593-197-C-4-B55-B0-A2-30870-B2099-A6.png">
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://i.ibb.co/bVKcj9C/53-D36593-197-C-4-B55-B0-A2-30870-B2099-A6.png" type="image/png">
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
-  
+
   <style>
-    /* ===== Reset e Tipografia ===== */
-    * {margin:0; padding:0; box-sizing:border-box;}
-    body {font-family: 'Outfit', sans-serif; background:#fff; color:#222; line-height:1.6; scroll-behavior: smooth;}
-    a {text-decoration:none; color:inherit; transition:0.3s;}
-    img {max-width:100%; display:block;}
+    /* ===== RESET ===== */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Outfit', sans-serif; background: #ffffff; color: #222; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; transition: 0.3s; }
+    .container { max-width: 960px; margin: 0 auto; padding: 20px; }
 
-    /* ===== Preloader ===== */
-    #preloader {position: fixed; top:0; left:0; right:0; bottom:0; background:#fff; display:flex; flex-direction:column; align-items:center; justify-content:center; z-index:9999; transition: opacity 0.5s ease-out;}
-    .loader {width:40px; height:40px; border:4px solid #00f7ff; border-top:4px solid transparent; border-radius:50%; animation:spin 1s linear infinite; margin-bottom:10px;}
-    @keyframes spin {0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
-    #preloader p {font-weight:bold; color:#222;}
+    /* ===== PRELOADER ===== */
+    #preloader { position: fixed; top:0; left:0; right:0; bottom:0; background:#fff; display:flex; flex-direction:column; align-items:center; justify-content:center; z-index:9999; transition: opacity 0.5s ease-out; }
+    .loader { width:40px; height:40px; border:4px solid #00f7ff; border-top:4px solid transparent; border-radius:50%; animation:spin 1s linear infinite; margin-bottom:10px; }
+    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    #preloader p { font-weight:bold; color:#222; }
 
-    /* ===== Header ===== */
-    header {background:#fff; box-shadow:0 3px 12px rgba(0,0,0,0.06); padding:15px 0; position:sticky; top:0; z-index:1000;}
-    .container {max-width:960px; margin:0 auto; padding:0 20px;}
-    .header-content {display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;}
-    .logo {font-size:2em; font-weight:700; display:flex; align-items:center; gap:10px; background: linear-gradient(270deg, #00ffff, #ff00ff, #00ffcc, #0077ff); background-size: 800% 800%; -webkit-background-clip:text; -webkit-text-fill-color:transparent; animation: rgbGlow 8s ease infinite, float 3s ease-in-out infinite;}
-    .logo-icon {width:32px; height:32px;}
-    @keyframes rgbGlow {0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
-    @keyframes float {0%,100%{transform:translateY(0);}50%{transform:translateY(-5px);}}
-    nav a {margin-left:20px; font-weight:600; color:#222;}
+    /* ===== HEADER ===== */
+    header { background:#fff; box-shadow:0 3px 12px rgba(0,0,0,0.06); padding:20px 0; position: sticky; top:0; z-index:1000; }
+    .header-content { display:flex; justify-content:space-between; align-items:center; }
+    .logo { font-size:2.2em; font-weight:700; display:flex; align-items:center; gap:10px; background: linear-gradient(270deg, #00ffff, #ff00ff, #00ffcc, #0077ff); background-size: 800% 800%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: rgbGlow 8s ease infinite, float 3s ease-in-out infinite; }
+    .logo-icon { width:32px; height:32px; }
+    @keyframes rgbGlow { 0% { background-position:0% 50%; } 50% { background-position:100% 50%; } 100% { background-position:0% 50%; } }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
 
-    /* ===== Hero ===== */
-    .hero {background:#f4fefe; padding:80px 20px; text-align:center; overflow:hidden;}
-    .hero h2 {font-size:2.2em; font-weight:600; margin-bottom:15px; opacity:0; transform:translateY(20px); transition:0.8s ease;}
-    .hero p {font-size:1.1em; margin-bottom:25px; opacity:0; transform:translateY(20px); transition:0.8s ease 0.2s;}
-    .hero-buttons {display:flex; justify-content:center; gap:15px; flex-wrap:wrap; opacity:0; transform:translateY(20px); transition:0.8s ease 0.4s;}
-    .btn {background:transparent; color:#fff; padding:12px 25px; border-radius:5px; font-weight:bold; display:inline-block; cursor:pointer; border:2px solid transparent; position:relative; z-index:1; overflow:hidden; transition:color 0.3s;}
-    .btn::before {content:''; position:absolute; top:0; left:0; width:100%; height:100%; background:linear-gradient(270deg, #ff00c8,#00ffe7,#fffb00,#ff00c8); background-size:600% 600%; animation: rgbSmooth 10s ease infinite; z-index:-1; opacity:1;}
-    .btn:hover {color:#000; background-color:#fff;}
-    .btn-secondary {background:#00bfa6; color:#fff; border:none;}
-    @keyframes rgbSmooth {0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+    /* ===== HERO ===== */
+    .hero { background: #f4fefe; padding: 80px 20px; text-align: center; }
+    .hero h2 { font-size: 2.5em; font-weight: 600; margin-bottom: 20px; }
+    .hero p { margin-bottom: 30px; font-size: 1.1em; }
 
-    /* ===== Sections ===== */
-    section {padding:50px 20px;}
-    .section.alt {background:#f9f9f9;}
-    section h2 {font-size:1.8em; margin-bottom:20px; color:#00bfa6; opacity:0; transform:translateY(20px); transition:0.8s ease;}
-    section p {opacity:0; transform:translateY(20px); transition:0.8s ease 0.2s;}
+    /* ===== BOTÕES ===== */
+    .btn { background: transparent; color: #fff; padding: 12px 25px; border-radius: 5px; font-weight: bold; display: inline-block; cursor: pointer; border: 2px solid transparent; position: relative; z-index: 1; overflow: hidden; transition: color 0.3s ease; }
+    .btn::before { content: ''; position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(270deg, #ff00c8, #00ffe7, #fffb00, #ff00c8); background-size:600% 600%; animation: rgbSmooth 10s ease infinite; z-index:-1; opacity:1; border-radius:5px; }
+    .btn:hover { color:#000; background-color:#fff; transition: all 0.3s ease; }
 
-    /* ===== Serviços - Cards Interativos ===== */
-    .servicos-grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:20px;}
-    .servico-card {background:#fff; padding:20px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1); transition:transform 0.3s, box-shadow 0.3s; opacity:0; transform:translateY(20px);}
-    .servico-card:hover {transform:translateY(-10px); box-shadow:0 8px 20px rgba(0,0,0,0.15);}
-    .servico-card h3 {margin-bottom:10px; color:#00bfa6;}
-    .servico-card p {font-size:0.95em; color:#555;}
+    /* Luz interativa nos botões */
+    .btn::after { content:''; position:absolute; top:var(--y,0); left:var(--x,0); width:100px; height:100px; background: radial-gradient(circle, rgba(255,255,255,0.5) 0%, transparent 80%); transform: translate(-50%, -50%) scale(0); transition: transform 0.3s ease; border-radius:50%; pointer-events:none; z-index:2; }
+    .btn:hover::after { transform: translate(-50%, -50%) scale(2); }
 
-    /* ===== Formulário ===== */
-    form input, form textarea {width:100%; padding:12px; margin-bottom:15px; border-radius:4px; border:1px solid #ddd; background:#fff;}
-    form textarea {height:120px; resize:none;}
-    form input:focus, form textarea:focus {border-color:#00bfa6; outline:none; box-shadow:0 0 5px rgba(0,191,166,0.5);}
-    form .btn {margin-right:10px;}
+    @keyframes rgbSmooth { 0% { background-position:0% 50%; } 50% { background-position:100% 50%; } 100% { background-position:0% 50%; } }
 
-    /* ===== Footer ===== */
-    footer {background:#fff; color:#999; text-align:center; padding:20px 0; font-size:0.9em; border-top:1px solid #eee;}
+    /* ===== SECTIONS ===== */
+    .section { padding:60px 20px; background:#fff; }
+    .section.alt { background:#f9f9f9; }
+    .section h2 { font-size:2em; margin-bottom:20px; color:#00bfa6; }
 
-    /* ===== WhatsApp flutuante ===== */
-    .whatsapp-float {position:fixed; bottom:20px; right:20px; width:50px; height:50px; background-color:#25D366; color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:28px; box-shadow:2px 2px 10px rgba(0,0,0,0.2); z-index:1000; transition:transform 0.3s, box-shadow 0.3s;}
-    .whatsapp-float:hover {transform:scale(1.15); box-shadow:4px 4px 15px rgba(0,0,0,0.3);}
+    /* ===== SERVIÇOS ===== */
+    .servicos-lista { list-style: none; display: flex; flex-wrap: wrap; gap:20px; padding:0; margin-top:20px; }
+    .servico-card { flex:1 1 calc(50% - 20px); background:#fff; border-radius:10px; padding:20px; box-shadow:0 5px 15px rgba(0,0,0,0.05); perspective:1000px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .servico-card-inner { transform-style: preserve-3d; transition: transform 0.3s ease; }
+    .servico-card h3 { margin-bottom:10px; color:#00bfa6; }
+    .servico-card p { font-size:0.95em; color:#333; }
 
-    /* ===== Responsivo ===== */
-    @media(max-width:768px){
-      .header-content {flex-direction:column; align-items:flex-start;}
-      nav {margin-top:10px;}
-      nav a {margin-left:0; margin-right:15px;}
-      .hero h2 {font-size:1.8em;}
-      .hero p {font-size:1em;}
-      .servicos-grid {grid-template-columns:1fr 1fr;}
-    }
-    @media(max-width:480px){
-      .hero {padding:60px 15px;}
-      .hero h2 {font-size:1.5em;}
-      .hero p {font-size:0.95em;}
-      .btn {padding:10px 20px; font-size:0.9em;}
-      section {padding:40px 15px;}
-      .servicos-grid {grid-template-columns:1fr;}
-    }
+    /* ===== FORMULÁRIO ===== */
+    form input, form textarea { width:100%; padding:12px; margin-bottom:15px; border-radius:4px; border:1px solid #ddd; background:#fff; }
+    form textarea { height:120px; resize:none; }
+    form .btn { margin-right:10px; }
 
-    /* ===== Animações Scroll ===== */
-    .show {opacity:1 !important; transform:translateY(0) !important;}
+    /* ===== FOOTER ===== */
+    footer { background:#fff; color:#999; text-align:center; padding:20px 0; font-size:0.9em; border-top:1px solid #eee; }
+
+    /* ===== WHATSAPP FLOAT ===== */
+    .whatsapp-float { position:fixed; bottom:20px; right:20px; width:50px; height:50px; background-color:#25D366; color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:28px; box-shadow:2px 2px 10px rgba(0,0,0,0.2); z-index:1000; transition: transform 0.3s ease; }
+    .whatsapp-float:hover { transform: scale(1.1); }
+
+    /* RESPONSIVE */
+    @media(max-width:768px){ .servico-card{ flex:1 1 100%; } }
   </style>
 </head>
 
 <body>
+  <!-- PRELOADER -->
   <div id="preloader">
     <div class="loader"></div>
     <p>Carregando o servidor...</p>
   </div>
 
+  <!-- HEADER -->
   <header>
     <div class="container header-content">
       <h1 class="logo">
-        <img src="https://i.ibb.co/bVKcj9C/53-D36593-197-C-4-B55-B0-A2-30870-B2099-A6.png" alt="Logo Onflykc" class="logo-icon">
+        <img src="https://i.ibb.co/bVKcj9C/53-D36593-197-C-4-B55-B0-A2-30870-B2099-A6.png" alt="Pinguim" class="logo-icon">
         Onflykc
       </h1>
-      <nav>
-        <a href="#sobre">Sobre</a>
-        <a href="#influenciadores">Influenciadores</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#contato">Contato</a>
-      </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="container">
-        <h2>Conectamos Marcas a Influenciadores</h2>
-        <p>Representamos creators, fechamos campanhas e cuidamos da imagem digital dos influenciadores.</p>
-        <div class="hero-buttons">
-          <a href="https://wa.me/551199128663" class="btn">Quero anunciar</a>
-          <a href="#influenciadores" class="btn btn-secondary">Sou influenciador</a>
-        </div>
-      </div>
-    </section>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <h2>Conectamos Marcas a Influenciadores.</h2>
+      <p>Na Onflykc Agency, representamos creators, fechamos campanhas e cuidamos da imagem digital dos influenciadores.</p>
+      <a href="https://wa.me/551199128663?text=Olá,+gostaria+de+saber+mais!+" class="btn">Quero anunciar com vocês</a>
+    </div>
+  </section>
 
-    <section id="sobre" class="section">
-      <div class="container">
-        <h2>Sobre a Onflykc</h2>
-        <p>A Onflykc é uma assessoria moderna focada em conectar marcas a influenciadores reais e autênticos. Nossa missão é gerar resultados com campanhas impactantes, cuidando da imagem e profissionalismo dos creators, enquanto oferecemos retorno claro para os anunciantes.</p>
-      </div>
-    </section>
+  <!-- SOBRE -->
+  <section id="sobre" class="section">
+    <div class="container">
+      <h2>Sobre a Onflykc</h2>
+      <p>A Onflykc é uma assessoria moderna focada em conectar marcas a influenciadores reais e autênticos. Nossa missão é gerar resultados com campanhas impactantes, cuidando da imagem e profissionalismo dos creators, enquanto oferecemos retorno claro para os anunciantes.</p>
+    </div>
+  </section>
 
-    <section id="influenciadores" class="section alt">
-      <div class="container">
-        <h2>Influenciadores</h2>
-        <p>Trabalhamos com talentos em ascensão e criadores já consolidados nas redes sociais. Se você é influenciador e quer representação séria e profissional, cadastre-se conosco.</p>
-        <a href="https://wa.me/551199128663" class="btn btn-secondary">Cadastrar como Influenciador</a>
-      </div>
-    </section>
+  <!-- INFLUENCIADORES -->
+  <section id="influenciadores" class="section alt">
+    <div class="container">
+      <h2>Influenciadores</h2>
+      <p>Trabalhamos com talentos em ascensão e criadores já consolidados nas redes sociais. Se você é influenciador e quer representação séria e profissional, cadastre-se conosco.</p>
+      <a href="https://wa.me/551199128663?text=Olá,+gostaria+de+saber+mais!+" class="btn">Quero ser selecionado</a>
+    </div>
+  </section>
 
-    <section id="servicos" class="section">
-      <div class="container">
-        <h2>Serviços</h2>
-        <div class="servicos-grid">
-          <div class="servico-card">
-            <h3>Fechamento de campanhas</h3>
-            <p>Alinhamento de influenciadores com marcas que correspondam à imagem do creator.</p>
-          </div>
-          <div class="servico-card">
-            <h3>Gestão de imagem</h3>
-            <p>Planejamento de carreira digital e manutenção de presença estratégica nas redes.</p>
-          </div>
-          <div class="servico-card">
-            <h3>Criação de Media Kits</h3>
-            <p>Media kits profissionais e completos, prontos para apresentar o influencer ao mercado.</p>
-          </div>
-          <div class="servico-card">
-            <h3>Consultoria digital</h3>
-            <p>Posicionamento estratégico, análise de métricas e otimização de conteúdo.</p>
-          </div>
-        </div>
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="section">
+    <div class="container">
+      <h2>Serviços</h2>
+      <div class="servicos-lista">
+        <div class="servico-card"><div class="servico-card-inner"><h3>Fechamento de campanhas</h3><p>Alinhamento de influenciadores com marcas que correspondam à imagem do creator.</p></div></div>
+        <div class="servico-card"><div class="servico-card-inner"><h3>Gestão de imagem</h3><p>Planejamento e acompanhamento da carreira digital dos influenciadores.</p></div></div>
+        <div class="servico-card"><div class="servico-card-inner"><h3>Criação de media kits</h3><p>Apresentações profissionais e material estratégico para influenciadores.</p></div></div>
+        <div class="servico-card"><div class="servico-card-inner"><h3>Consultoria digital</h3><p>Orientações de posicionamento estratégico e presença online.</p></div></div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="contato" class="section alt">
-      <div class="container">
-        <h2>Contato</h2>
-        <form action="https://formsubmit.co/seuemail@dominio.com" method="POST">
-          <input type="text" name="name" placeholder="Seu Nome" required>
-          <input type="email" name="email" placeholder="Seu E-mail" required>
-          <textarea name="message" placeholder="Mensagem" required></textarea>
-          <button type="submit" class="btn btn-secondary">Enviar</button>
-        </form>
-      </div>
-    </section>
-  </main>
+  <!-- CONTATO -->
+  <section id="contato" class="section alt">
+    <div class="container">
+      <h2>Entre em Contato</h2>
+      <p>Preencha o formulário e nossa equipe retornará com uma proposta personalizada para sua marca.</p>
+      <form action="https://formsubmit.co/gota7@proton.me" method="POST">
+        <input type="text" name="nome" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu e-mail" required>
+        <textarea name="mensagem" placeholder="Como podemos ajudar?" required></textarea>
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </div>
+  </section>
 
+  <!-- FOOTER -->
   <footer>
-    &copy; 2025 Onflykc Agency. Todos os direitos reservados.
+    <div class="container">
+      <p>&copy; 2025 Onflykc Agency • Todos os direitos reservados</p>
+    </div>
   </footer>
 
-  <a href="https://wa.me/551199128663" class="whatsapp-float" target="_blank">💬</a>
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/5511999128663" class="whatsapp-float" target="_blank" aria-label="WhatsApp">&#x1F4AC;</a>
 
   <script>
-    // Preloader
+    // PRELOADER
     window.addEventListener("load", function() {
       const preloader = document.getElementById("preloader");
       preloader.style.opacity = "0";
-      setTimeout(()=>{preloader.style.display="none";},500);
+      setTimeout(()=>{ preloader.style.display = "none"; }, 500);
+    });
 
-      // Scroll Animation
-      const scrollElements = document.querySelectorAll('h2, p, .hero-buttons, .servico-card');
-      const elementInView = (el, offset = 0) => {
-        const elementTop = el.getBoundingClientRect().top;
-        return elementTop <= (window.innerHeight || document.documentElement.clientHeight) - offset;
-      };
-      const displayScrollElement = (element) => { element.classList.add('show'); };
-      const handleScrollAnimation = () => {
-        scrollElements.forEach(el => { if(elementInView(el, 50)){displayScrollElement(el);} });
-      };
-      window.addEventListener('scroll', handleScrollAnimation);
-      handleScrollAnimation();
+    // LUZ INTERATIVA NOS BOTÕES
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('mousemove', e => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        btn.style.setProperty('--x', x + 'px');
+        btn.style.setProperty('--y', y + 'px');
+      });
+    });
+
+    // TILT 3D NOS CARDS
+    document.querySelectorAll('.servico-card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateY = ((x - centerX)/centerX) * 10;
+        const rotateX = ((centerY - y)/centerY) * 10;
+        card.querySelector('.servico-card-inner').style.setProperty('--rotateY', rotateY + 'deg');
+        card.querySelector('.servico-card-inner').style.setProperty('--rotateX', rotateX + 'deg');
+      });
+      card.addEventListener('mouseleave', ()=> {
+        card.querySelector('.servico-card-inner').style.setProperty('--rotateY','0deg');
+        card.querySelector('.servico-card-inner').style.setProperty('--rotateX','0deg');
+      });
     });
   </script>
 </body>
